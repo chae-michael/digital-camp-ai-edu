@@ -2,42 +2,116 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>희망잇는 시니어 디지털 캠프</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      padding: 2rem;
+      margin: 0;
+      background-color: #f8f9fa;
       color: #333;
     }
-    h1 {
-      color: #1e90ff;
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
-    a {
-      color: #0066cc;
+
+    header img {
+      max-width: 150px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
       text-decoration: none;
+      font-size: 1rem;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .btn:hover {
+      background-color: #0d6efd;
     }
-    ul {
-      padding-left: 1.5rem;
+
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0; }
+      33% { margin-left: -100%; }
+      66% { margin-left: -200%; }
+      100% { margin-left: 0; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1f1f1;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
-
 </head>
-<body style="font-family: sans-serif; padding: 2rem;">
-  <h1>📘 희망잇는 시니어 디지털 캠프</h1>
-  <p>이 사이트는 디지털 역량 강화와 AI 교육을 위한 자료를 공유하는 공간입니다.</p>
+<body>
 
-  <h2>📂 자료 다운로드</h2>
-  <ul>
-    <li><a href="docs/사업개요_디지털캠프.pdf">사업개요서 (PDF)</a></li>
-    <li><a href="slides/01_intro_ai.pptx">AI 소개 슬라이드</a></li>
-    <li><a href="notebooks/data_summary_demo.ipynb">Jupyter 실습</a></li>
-  </ul>
+  <header>
+    <img src="assets/logo.png" alt="로고 이미지" />
+    <h1>희망잇는 시니어 디지털 캠프</h1>
+    <p>AI 시대를 살아갈 시니어를 위한 디지털 역량 강화 프로젝트</p>
+  </header>
 
-  <h2>📞 문의</h2>
-  <p>운영: 사회적협동조합 되돌림 / 동사경센터<br>이메일: contact@eastse.net</p>
+  <div class="container">
+    <h2>📁 자료 다운로드</h2>
+    <a class="btn" href="docs/사업개요_디지털캠프.pdf">📄 사업개요서</a>
+    <a class="btn" href="slides/01_intro_ai.pptx">🎞️ AI 소개 슬라이드</a>
+    <a class="btn" href="notebooks/data_summary_demo.ipynb">📊 Jupyter 실습</a>
+
+    <div class="slider">
+      <div class="slides">
+        <img src="assets/banner1.jpg" alt="슬라이드1" />
+        <img src="assets/banner2.jpg" alt="슬라이드2" />
+        <img src="assets/banner3.jpg" alt="슬라이드3" />
+      </div>
+    </div>
+
+    <h2>📞 문의</h2>
+    <p>
+      운영: 동사경센터<br>
+      이메일: <a href="mailto:contact@eastse.net">contact@eastse.net</a>
+    </p>
+  </div>
+
+  <footer>
+    © 2025 동사경센터 / DDM Digital Camp · GitHub Pages Powered
+  </footer>
+
 </body>
 </html>
